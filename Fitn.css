@@ -1,0 +1,279 @@
+﻿*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family:sans-serif;
+}
+html {
+  scroll-behavior: smooth;
+}
+header{
+  width: 100%;
+  height: 100vh;
+  background:black;
+
+}
+nav{
+  width: 100%;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color:white;
+}
+.logo{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 55px;
+	width: 15%;
+	font-weight: 700;
+	font-size: 40px;
+}
+#blue{
+  color:yellowgreen;
+}
+.menu a{
+  text-decoration: none;
+  color:white;
+  font-size: 20px;
+  font-weight: bold;
+  padding:20px;
+  margin:20px;
+}
+.menu a:first-child{
+  border-bottom: 2px solid yellowgreen;
+}
+.banner{
+	background: url("back.jpg");
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	height: 85vh;
+}
+
+.intro{
+	position: absolute;
+	top: 30%;
+	left: 5%;
+	color: white;
+}
+
+.intro h2,p{
+	display: block;
+	width: 60%;
+}
+
+.intro h2{
+	text-transform: uppercase;
+	letter-spacing: 2px;
+	font-size: 4rem;
+}
+.btn{
+  margin-top: 2rem;
+  display: inline-block;
+	padding: .6rem .8rem;
+	background: yellowgreen;
+	color: white;
+	font-size: 27px;
+	text-decoration: none;
+	outline: none;
+  border-radius: 8px;
+}
+#fitness{
+  background-color:black;
+  color:white;
+  padding:100px 0px;
+}
+.about-row{
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.about-left-col{
+  flex-basis:50%;
+  text-align: left;
+}
+.about-right-col{
+  flex-basis:50%;
+  text-align: center;
+}
+.about-right-col img{
+  width:70%;
+}
+.about-left-col{
+  max-width:800px;
+  margin: 20px;
+  padding: 50px;
+}
+.about-left-col h1{
+  font-size:50px;
+}
+.about-left-col p{
+  font-size: 20px;
+  text-align: justify;
+  margin:30px 0px;
+  width:100%;
+}
+.title {
+  font-size: 3rem;
+  color:red;
+  margin-top: .5rem;
+}
+#diet{
+  padding:50 px 0px;
+  background: black;
+}
+.diet-plan{
+  text-align:center;
+}
+.diet-plan h1{
+  font-size: 50px;
+  color:white;
+}
+.diet-plan h4{
+  font-size: 25px;
+  font-weight:bold;
+  padding-top: 10px;
+  color:white;
+}
+.diet-row{
+  display: grid;
+  grid-template-columns: repeat(3,250px);
+  grid-auto-rows: minmax(200px,auto);
+  grid-gap: 3em;
+  justify-content: center;
+  padding-top: 30px;
+  padding-bottom: 100px;
+}
+a:visited {
+color:white;
+text-decoration: none;
+}
+.diet-box{
+  box-shadow: 0px 0px 20px grey;
+  padding: 10px;
+  text-align: center;
+  color:white;
+}
+.diet-box a:hover{
+  color:yellowgreen;
+  text-decoration: none;
+}
+.diet-box h4{
+  padding-top: 20px;
+  color:grey;
+
+}
+#contact{
+  padding:30px 0px;
+  background-color:black;
+  color:white;
+}
+.contact-row{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+.contact-left-col{
+  flex-basis: 50%;
+  padding-top:50px;
+}
+.contact-right-col{
+  flex-basis: 50%;
+  max-width: 450px;
+  margin:auto;
+}
+.contact-right-col h1{
+  margin:10px;
+  margin-bottom: 20px;
+}
+.contact-right-col p{
+  margin:10px;
+  margin-bottom: 20px;
+}
+.form{
+  width:70%;
+  margin: auto;
+  text-align: center;
+}
+.form input[type="text"]{
+  width:70%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+textarea{
+  width:70%;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+.info h1{
+  font-size: 40px;
+}
+.info{
+  text-align: center;
+  font-size: 20px;
+}
+.box{
+  flex-basis: 50%;
+  max-width: 450px;
+  margin:auto;
+}
+.box h1{
+  margin:10px;
+  margin-bottom: 20px;
+  font-size: 30px;
+}
+.box p{
+  margin:10px;
+  padding: 5px;
+  display:block;
+  font-size: 20px;
+  text-decoration: none;
+  color:white;
+  width:100%;
+}
+#footer{
+  background: grey;
+  color:white;
+  display:flex;
+  padding:10px;
+  justify-content: space-around;
+  align-items: center;
+}
+#exercises{
+  text-align:center;
+  background-color: black;
+}
+#exe{
+  color:yellowgreen;
+  font-size: 25px;
+}
+#exe1,#exe2,#exe3,#exe4,#exe5,#exe6,#exe7{
+  color:white;
+  font-size: 20px;
+  text-align: left;
+  margin-left: 600px;
+}
+.container h1{
+  font-size: 50px;
+}
+#result{
+  font-size: 28px;
+  color:white;
+}
+#white{
+  color:white;
+}
+.container h2{
+  text-align: left;
+  padding-left: 680px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+#height,#weight{
+  padding: 10px;
+  border-radius: 15px;
+}

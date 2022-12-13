@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fitness Website</title>
+    <link rel="stylesheet" href="Fitn.css">
+    <script type="text/javascript">
+      function calculateBMI() {
+          let height = parseInt(document.querySelector("#height").value);
+          let weight = parseInt(document.querySelector("#weight").value);
+          let result = document.querySelector("#result");
+          if (height === "" || isNaN(height))
+              result.innerHTML = "Provide a valid Height!";
+          else if (weight === "" || isNaN(weight))
+              result.innerHTML = "Provide a valid Weight!";
+          else {
+              let bmi = (weight / ((height * height)/ 10000)).toFixed(2);
+              if (bmi < 18.6){
+                  result.innerHTML =`<span>${bmi}</span> - Under Weight`;
+                  document.getElementById("exe").innerHTML="Some suggested workouts are:";
+                  document.getElementById("exe1").innerHTML="Monday- Chest & Upper Abs";
+                  document.getElementById("exe2").innerHTML="Tuesday-Back & Lower Abs";
+                  document.getElementById("exe3").innerHTML="Wednesday- Legs";
+                  document.getElementById("exe4").innerHTML="Thursday- Rest";
+                  document.getElementById("exe5").innerHTML="Friday- Biceps, Triceps & Upper Abs";
+                  document.getElementById("exe6").innerHTML="Saturday- Shoulders & Lower Abs";
+                  document.getElementById("exe7").innerHTML="Sunday- Rest"
+                }
+              else if (bmi >= 18.6 && bmi < 24.9){
+                  result.innerHTML = `<span>${bmi}</span> - Normal`;
+                  document.getElementById("exe").innerHTML="Some suggested workouts are:";
+                  document.getElementById("exe1").innerHTML="Monday- Push (Chest, Triceps, Shoulders) ";
+                  document.getElementById("exe2").innerHTML="Tuesday-Pull (Back & Biceps)";
+                  document.getElementById("exe3").innerHTML="Wednesday- Abs (Upper, Lower & core)";
+                  document.getElementById("exe4").innerHTML="Thursday- Rest";
+                  document.getElementById("exe5").innerHTML="Friday- Legs";
+                  document.getElementById("exe6").innerHTML="Saturday- Cardio & Core ";
+                  document.getElementById("exe7").innerHTML="Sunday- Rest"
+                }
+              else{
+                  result.innerHTML = `<span>${bmi}</span> - Over Weight`;
+                  document.getElementById("exe").innerHTML="Some suggested workouts are:";
+                  document.getElementById("exe1").innerHTML="Monday- Push (Chest, Triceps, Shoulders)";
+                  document.getElementById("exe2").innerHTML="Tuesday-Pull (Back & Biceps) & Lower Abs";
+                  document.getElementById("exe3").innerHTML="Wednesday- Cardio & Upper Abs";
+                  document.getElementById("exe4").innerHTML="Thursday- Rest";
+                  document.getElementById("exe5").innerHTML="Friday- Legs";
+                  document.getElementById("exe6").innerHTML="Saturday- Cardio & Core ";
+                  document.getElementById("exe7").innerHTML="Sunday- Rest"
+                }
+
+          }
+      }
+    </script>
+  </head>
+  <body>
+    <header id="home">
+      <nav>
+        <div class="logo">
+          <span id="blue">Sanely</span>Fit
+        </div>
+        <div class="menu">
+          <a href="#home">Home</a>
+          <a href="#fitness">About Us</a>
+          <a href="#exercises">Exercises</a>
+          <a href="#diet">Diet Recipes</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </nav>
+      <div class="banner">
+        <div class="intro">
+          <h2>Way To a Fit Lifestyle</h2>
+          <a href="#fitness" class="btn">Get Started</a>
+        </div>
+      </div>
+    </header>
+    <section id="fitness">
+      <div class="about-row">
+        <div class="about-left-col">
+          <h1>About<span id="blue"> SanelyFit</span></h1>
+
+          <p>SanelyFit was started on World Health Day on 7 th April 2006. It’s been more than a decade of educating people in fitness.
+             Every year 1000+ students pass out of the institute. SanelyFit offers the most exciting and up-to-date curriculum as well as ongoing training in all aspects of the fitness industry.
+             SanelyFit is the only Advanced Personal Trainer program, which offers you low-cost tuition, fast test results and complete career development.
+          </p>
+          <a href="#exercises" class="btn">Explore More</a>
+        </div>
+        <div class="about-right-col">
+          <img src="chain.jpg" alt="">
+        </div>
+      </div>
+    </section>
+
+
+    <section id="exercises">
+      <div class="container">
+        <h1><span id="blue">BMI </span><span id="white">Calculator</span></h1><br>
+        <h2 id="blue">Height (in cm)</h2>
+        <input type="text" id="height" size=10 style="font-size:20pt"><br><br>
+        <h2 id="blue">Weight (in kg)</h2>
+        <input type="text" id="weight" size=10 style="font-size:20pt"><br><br>
+        <button id="btn" onclick="calculateBMI()" class="btn">Calculate</button><br><br><br><br>
+        <div id="result"></div><br><br><br>
+        <div id="exe"></div><br>
+        <div id="exe1"></div><br>
+        <div id="exe2"></div><br>
+        <div id="exe3"></div><br>
+        <div id="exe4"></div><br>
+        <div id="exe5"></div><br>
+        <div id="exe6"></div><br>
+        <div id="exe7"></div><br><br><br><br><br><br><br><br>
+      </div>
+    </div>
+    </section>
+
+
+    <section id="diet">
+      <div class="diet-plan">
+        <h1>Our best<span id="blue"> Recipes</span></h1>
+        <h4> A healthy outside starts from the inside</h4>
+      </div>
+      <div class="diet-row">
+        <div class="diet-box">
+          <h2><a href="https://www.youtube.com/embed/rQblUItn-m8" style="text-decoration:none;">Chana Protein Salad</a></h2>
+          <h4>Chana Salad that combines fresh vegetables including cherry tomatoes, cucumbers, onions in an easy homemade lemon- olive oil dressing.</h4>
+        </div>
+        <div class="diet-box">
+          <h2><a href="https://www.youtube.com/embed/DPw1PbpD_fs" style="text-decoration:none;">Chicken Lentil Soup</a></h2>
+          <h4>This delicious, hearty chicken and lentil soup made with cilantro, cumin and spices is perfect for warming your belly on those cold winter nights.</h4>
+        </div>
+        <div class="diet-box">
+          <h2><a href="https://www.youtube.com/embed/eeyo5nXRGoQ" style="text-decoration:none;">Mixed Sprouts Soup</a></h2>
+          <h4>A nutrition-packed soup made with the goodness of mixed sprouts to soothe your soul.</h4>
+        </div>
+        <div class="diet-box">
+          <h2><a href="https://www.youtube.com/embed/WsMrvadHbDg" style="text-decoration:none;">Egg Caserole</a></h2>
+          <h4>This healthy vegetarian egg casserole is prepared Mediterranean-style with vegetables, shallots and fresh herbs.</h4>
+        </div>
+        <div class="diet-box">
+          <h2><a href="https://www.youtube.com/embed/xbxTA0GULkU" style="text-decoration:none;">Soya Chunks Salad</a></h2>
+          <h4>Soya Chunks Salad is a quick meal recipe made up of Cabbage and Red, Green and yellow bell peppers which is to be very nutritious and light.</h4>
+        </div>
+        <div class="diet-box">
+          <h2><a href="https://www.youtube.com/embed/Yyx5HpsNz0Y" style="text-decoration:none;">Vegan Dinner Bowl</a></h2>
+          <h4>A perfect high protein low carb bowl mix of minced cabbage, healthy veggies such as broccoli and cabbage.</h4>
+        </div>
+      </div>
+    </section>
+    <section id="contact">
+      <div class="info">
+        <center><h1>Get in<span id="blue">Touch</span></h1>
+        <p>We are Available</p></center>
+      </div>
+      <div class="contact-row">
+        <div class="contact-left-col">
+          <div class="form">
+            <input type="text" name="" placeholder="E-mail">
+            <input type="text" name="" placeholder="Phone no."><br>
+            <textarea name="name" rows="10" cols="40" placeholder="Message"></textarea>
+            <br><a href="#home" class="btn">Send</a>
+          </div>
+        </div>
+        <div class="contact-right-col">
+          <h1><span id="blue">E-mail</span></h1>
+          <p>saitushaarr@gmail.com<br>
+          srinidhi@gmail.com</p><br>
+          <h1><span id="blue">Mobile</span></h1>
+          <p>+91-9400697901</p><br>
+          <h1><span id="blue">Address</span></h1>
+          <p>Ramakrishna nagar,<br>
+          E and F Block,<br>
+          Mysore-570022
+          </p>
+      </div>
+      <div class="box">
+          <h1><span id="blue">Timings</span></h1>
+          <p> Monday    : <i> 7:00am - 10:30pm </i> </p>
+          <p> Tuesday   : <i> 7:00am - 10:30pm </i> </p>
+          <p> Wednesday : <i> 7:00am - 10:30pm </i> </p>
+          <p> Thursday  : <i> 7:00am - 10:30pm </i> </p>
+          <p> Friday    : <i> 7:00am - 10:30pm </i> </p>
+          <p> Saturday  : <i> 7:00am - 10:30pm </i> </p>
+          <p> Sunday    : <i> CLOSED </i> </p>
+      </div>
+    </section>
+    <section id="footer">
+      <h1>Sanely<span id="blue">Fit</span></h1>
+      <p>&copy; 2022 SanelyFit ,Mysore, India</p>
+    </section>
+  </body>
+</html>
