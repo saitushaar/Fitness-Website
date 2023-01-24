@@ -16,4 +16,3 @@ and offers a week's worth of exercise recommendation plan.
 1. HTML
 2. CSS
 3. Java Script
-4. PHP
